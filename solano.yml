@@ -1,0 +1,10 @@
+java:
+    java_version: 'java-7-openjdk'
+    gradle_version: '2.4'
+cache:
+    key_paths:
+    - build.gradle
+    save_paths:
+    - .gradle
+tests:
+    - ./gradlew build
