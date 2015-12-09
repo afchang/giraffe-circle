@@ -4,5 +4,7 @@ machine:
 test:
     override:
         - ./gradlew build --console=plain
-
+    post:
+        - mkdir -p $CIRCLE_TEST_REPORTS/junit
+        - find . -type f -regex ".*/build/.*TEST.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
 
