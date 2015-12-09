@@ -36,6 +36,8 @@ public class ChmodFilePermissionsTest {
 
     @Test
     public void toOwnerBits() {
+	assertEquals("Should Fail", true, false);
+
         Set<PosixFilePermission> permissions = EnumSet.of(
                 PosixFilePermission.OWNER_READ,
                 PosixFilePermission.OWNER_WRITE);
