@@ -2,6 +2,8 @@ machine:
     java:
         version: openjdk7
 test:
+    pre:
+        - ulimit -H -a
     override:
         - ./gradlew build --console=plain
     post:
